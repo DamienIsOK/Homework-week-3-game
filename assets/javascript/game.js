@@ -1,9 +1,10 @@
-var word = ['c', 'a', 't'];
 
+var word = ['c', 'a', 't'];
 var wins = 0;
 var losses = 0;
-
 var guessesLeft = 5;
+var wrongLetters = [];
+
 
 document.onkeyup = function(event) {
 	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
@@ -12,19 +13,21 @@ document.onkeyup = function(event) {
 		console.log('You guessed: ' + userGuess);
 		console.log('Correct');
 	} else {
-		console.log(userGuess);
-		console.log('Nah dawg');
+		wrongLetters.push(userGuess);
+		console.log(wrongLetters);
+		console.log('Nah dawg, you guessed ' + userGuess);
 		console.log(guessesLeft--);
+
 	}
 
-	score = "~SCORE~" + "<div id = 'wins'>" + wins +
-	"<div id = 'losses'>" + losses;
+	score = "~SCORE~" + "<div id = 'wins'>" + 'WINS: ' + wins +
+	"<div id = 'losses'>" + 'LOSSES: ' + losses;
 	document.querySelector('#game').innerHTML = score;
 
-	letters = "<div id = 'guessedLetters'>" + userGuess;
+	letters = "<div id = 'guessedLetters'>" + wrongLetters + ' ';
 	document.querySelector('#guessedLetterBox').innerHTML = letters;
 
-	guesses = "<div id = 'guessCount'>" + guessesLeft;
+	guesses = "<div id = 'guessCount'>" + 'GUESSES REMAINING: ' + guessesLeft;
 	document.querySelector('#guessCountBox').innerHTML = guesses;
 
 
