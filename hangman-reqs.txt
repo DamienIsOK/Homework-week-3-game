@@ -1,10 +1,10 @@
 Hangman Reqs
 
-- Input a word and break it apart into individual letters
+* Input a word and break it apart into individual letters
 
-- When a user selects a letter that is correct, place that letter into the console and print that letter to the Guessed Letter areas
+* When a user selects a letter that is correct, place that letter into the console
 
-- When a user select a letter that is wrong, then decrement the number of guesses left and print that letter to the Guessed Letter areas
+* When a user select a letter that is wrong, then decrement the number of guesses left and print that letter to the Guessed Letter areas
 
 - When all of the letters are selected correctly, then increment the Wins count
 
