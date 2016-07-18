@@ -1,0 +1,49 @@
+body {
+  background-color: lightblue;
+}
+
+#main {
+  /*border: 1px solid red;*/
+}
+
+#title {
+  margin: 0 auto;
+  width: 300px;
+}
+
+#logo {
+  width: 300px;
+}
+
+#instructions {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: bold;
+  color: darkblue;
+  text-align: center;
+
+}
+
+#dashedBox {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+  font-family: 'Helvetica', sans-serif;
+  color: red;
+  font-weight: bolder;
+  width: 300px;
+  text-align: center;
+  margin-bottom: 20px;
+  }
+
+#game, #guessedLetters, #guessCount {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  font-family: 'Helvetica', sans-serif;
+  color: darkred;
+  text-align: center;
+
+}
