@@ -7,30 +7,25 @@ var dash = "_ ";
 var letters = "";
 var wrongLetters = [];
 var correctLetters = [];
-
+var result = "";
 
 var randomWord = word[Math.floor(Math.random() * word.length)];
 console.log('The correct answer is ' + randomWord);
 
-// word is a string
-// letters in an array
-// dash is an optional string
-// letters = ["p","i","k","a","c","h","u"]
-
-var dashWord = function(word,letters){
-	// dash = dash || "_";
-	var output = "";
+// Took me 5 hours to complete just this function. Still not entirely sure how I got it to work
+var dashWord = function(word,letters) {
+	var result = "";
 	for(var i = 0; i < randomWord.length; i++){
 		if(letters.indexOf(word[i]) > -1){
-			output = output + word[i];
-		}
-		else
-		{
-			output = output + dash;
+			console.log(result = result + word[i]);
+		} else {
+			console.log(result = result + dash);
 		}
 	}
-
-	return output;
+	console.log('The result is: ' + result + letters + word);
+	return result;
+	return letters;
+	return word;
 }
 
 document.onkeyup = function(event) {
@@ -40,14 +35,13 @@ document.onkeyup = function(event) {
 		console.log('Correct! You guessed: ' + userGuess);
 		correctLetters.push(userGuess);
 
-
 	} else {
 		wrongLetters.push(userGuess);
-		console.log('Nah dawg, that\'s wrong. You guessed: ' + userGuess);
+		console.log('No, that\'s wrong. You guessed: ' + userGuess);
 		attemptsLeft--;
 
 	}
-	
+
 	score = "<div id = 'wins'>" + 'WINS: ' + wins +
 	"<div id = 'losses'>" + 'LOSSES: ' + losses;
 	document.querySelector('#game').innerHTML = score;
@@ -61,4 +55,4 @@ document.onkeyup = function(event) {
 	dashedLetter = 	dashWord(randomWord,correctLetters);
 	document.querySelector('#dashedBox').innerHTML = dashedLetter;
 
-};
+}
